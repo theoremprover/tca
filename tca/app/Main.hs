@@ -1,6 +1,6 @@
 module Main where
 
-import Paths
+import SlickGrid
 
 import qualified Graphics.UI.Threepenny as UI
 import Graphics.UI.Threepenny.Core
@@ -13,7 +13,7 @@ main :: IO ()
 main = do
     static <- getStaticDir
     startGUI defaultConfig {
-        jsStatic = Just "static",
+        jsStatic = Just "static/SlickGrid-gh-pages",
         jsPort   = Just 8023 } $ \ w -> do
 		    return w # set title "Test"
             return ()
