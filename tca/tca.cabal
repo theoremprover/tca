@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 5489e518b115e66397d94512f17acaea67f4883b67108be07359e448069104c8
+-- hash: 83976de5af90b63743b5a3de3218be6015b31693839861d36c7f91f4a942a3ea
 
 name:           tca
 version:        0.1.0.0
@@ -30,6 +30,8 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , filepath
+    , threepenny-gui
   exposed-modules:
       Lib
   other-modules:
@@ -43,8 +45,11 @@ executable tca-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , filepath
     , tca
+    , threepenny-gui
   other-modules:
+      Paths
       Paths_tca
   default-language: Haskell2010
 
@@ -56,7 +61,9 @@ test-suite tca-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , filepath
     , tca
+    , threepenny-gui
   other-modules:
       Paths_tca
   default-language: Haskell2010
